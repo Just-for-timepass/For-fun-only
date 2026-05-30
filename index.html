@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funny Surprise</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#fef6e4,#ffd6d6);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.page{
+    display:none;
+    width:100%;
+    max-width:400px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.page.active{
+    display:block;
+}
+
+img{
+    width:100%;
+    max-width:300px;
+    border-radius:15px;
+    margin:15px 0;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff6b6b;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff4d4d;
+}
+
+.small{
+    font-size:12px;
+    color:gray;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Page 1 -->
+<div class="page active">
+    <h2>Hello Bro</h2>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- Page 2 -->
+<div class="page">
+    <h3>
+        What are you looking for is here - aisa sochna galat baat hai.
+        Aur agar socha hai to tu gadhe se kuch kam nahi hai!!!
+    </h3>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- Page 3 -->
+<div class="page">
+    <h3>Nahi nahi tu website visit kia ehi bari baat hai</h3>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- Page 4 -->
+<div class="page">
+    <img src="https://media.istockphoto.com/id/1457254216/vector/sloth-with-a-questioning-look.jpg?s=612x612&w=0&k=20&c=-4gJuZdS-bgmtLEf-baD44sQAboFLKQ2qCeYDU6cyfQ=">
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- Page 5 -->
+<div class="page">
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Droopy_dog.png">
+    <h3>
+        Tu isse kam kaya hai.
+        Hai chota lekin kam karta to bari baat hota.
+        Wooooooo kam bhi nahi karta.
+    </h3>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- Page 6 -->
+<div class="page">
+    <img src="https://thumbs.dreamstime.com/b/cat-sleeping-book-open-reading-glasses-fallen-to-side-white-background-concept-how-good-may-help-one-50189720.jpg">
+    <h3>Tu ehi hai. Isse bara kaya chahta hai !!!!!</h3>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- Page 7 -->
+<div class="page">
+
+    <img src="https://drive.google.com/thumbnail?id=13Cigh5-7Q6X1Qshz-Q7pidmsQqUF2nit&sz=w1000">
+
+    <h3>Dil tera chahta hai e.</h3>
+
+    <img src="https://drive.google.com/thumbnail?id=1ykjhSA977_GqsqtnRUgyNY76nviigzs8&sz=w1000">
+
+    <h3>Magar tera oooo hai aisa!! 😂😂🤣🤣</h3>
+
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- Page 8 -->
+<div class="page">
+    <h3>
+        Dekh dekh ! laundo ka koi saram nahi hai.
+        Asi sarmane wali baat dekh kar bhi piche na hata.
+        Firse Next dabaya.
+        Sirf dabani hi tujhe pasand hai. 🙄😁😂😂😂
+    </h3>
+
+    <p class="small">
+        Each and every content used is just for fun.
+        Don't take it seriously or anything personal.
+    </p>
+</div>
+
+<script>
+let currentPage = 0;
+const pages = document.querySelectorAll(".page");
+
+function nextPage(){
+    pages[currentPage].classList.remove("active");
+    currentPage++;
+    if(currentPage < pages.length){
+        pages[currentPage].classList.add("active");
+    }
+}
+</script>
+
+</body>
+</html>
